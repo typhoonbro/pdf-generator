@@ -1,0 +1,4 @@
+github.com/gorilla/mux v1.8.1 h1:TuBL49tXwgrFYWhqrNgrUNEY92u81SPhu7sTdzQEiWY=
+github.com/gorilla/mux v1.8.1/go.mod h1:AKf9I4AEqPTmMytcMc0KkNouC66V3BtZ4qD5fmWSiMQ=
+github.com/krazybee/gofpdf v1.0.0 h1:4iCudQP531CgHScLjM00yFysohV7xKNOAWlQBFRvWaQ=
+github.com/krazybee/gofpdf v1.0.0/go.mod h1:+oj68xLsr+CtHwe3SpxitDjJMnwbDX+0rkaeWl6UDR0=
