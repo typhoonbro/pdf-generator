@@ -44,13 +44,10 @@ func inputPage(w http.ResponseWriter, r *http.Request) {
             Abstract:   r.FormValue("abstract"),
             Experience: r.FormValue("experience"),
         }
-
-        // do something with details
         a := details.Abstract
         e := details.Experience
         
         generateNew(w, r, a, e)
-        // tmpl.Execute(w, struct{ Success bool }{true})
 }
 
 func generateNew(w http.ResponseWriter, r *http.Request, a string, e string) {
@@ -84,7 +81,6 @@ func generateNew(w http.ResponseWriter, r *http.Request, a string, e string) {
             pdf.MultiCell(30, 8, "EXPERIENCE", "", "C", false)
             pdf.MultiCell(0, 8, e, "", "J", false)
 
-            // Show the pdf on localhost web page.
             err := pdf.Output(pw)
             if err != nil {
                 fmt.Println(err)
@@ -125,7 +121,6 @@ func generateExamplePDF(w http.ResponseWriter, r *http.Request) {
     pdf.CellFormat(85.00000000000000000, 0.00000000000000000, "", "", 0, "C", false, 0, "")
     pdf.MultiCell(30, 8, "Experience", "", "C", false)
 
-    // Show the pdf on localhost web page.
     err := pdf.Output(pw)
     if err != nil {
         fmt.Println(err)
