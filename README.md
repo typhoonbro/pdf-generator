@@ -1,6 +1,6 @@
 # PDF generator
 
-Go application that generates PDF files based on inputs on the source code.
+Go application that generates PDF files based on inputs in the source code.
 
 ### Setup
 
