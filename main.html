@@ -1,70 +1,35 @@
-
-    <h1>Contact</h1>
-    <form id="form" method="POST">
-        <div class="input-container">
-            <label>Abstract:</label><br />
-            <textarea id="abstract" name="abstract"></textarea><br />
-            <div class="error" id="abstract_error"></div>
-        </div>
-        <div class="input-container">
-            <label>Experience:</label><br />
-            <textarea id="experience" name="experience"></textarea><br />
-            <div class="error" id="experience_error"></div>
-        </div>
-        <input type="submit" id="submitBtn" value="Submit request">
-    </form>
-    <script>
-      // We access to the inputs by their id's
-    let abstract = document.getElementById("abstract");
-    let experience = document.getElementById("experience");
-
-    // Error messages
-    let errorElement = document.getElementById("abstract_error");
-    let errorElementExperience = document.getElementById("experience_error");
-
-    // Form
-    let contactForm = document.getElementById("form");
-
-    // Event listener
-    contactForm.addEventListener("submit", function (e) {
-      let messageAbstract = [];
-      let messageExperience = [];
-      
-        if (abstract.value === "" || abstract.value === null) {
-        messageName.push("* This field is required");
-      }
-
-      if (experience.value === "" || experience.value === null) {
-        messageAddress.push("* This field is required");
-      }
-
-      // Statement to shows the errors
-      if (messageAbstract.length || messageExperience.length > 0) {
-        e.preventDefault();
-        errorElement.innerText = messageAbstract;
-        errorElementAddress.innerText = messageExperience;
-      }
-      
-       // if the values length is filled and it's greater than 2 then redirect to this page
-        if (
-        (abstract.value.length > 2,
-        experience.value.length > 2)
-      ) {
-        // e.preventDefault();
-        window.location.assign("http://localhost:3333/pdf");
-      }
-
-    });
-    </script>
+    <div class="holder">
+        <h1>Generator</h1>
+        <h4>Insert your data</h4>
+        <form id="form" method="POST">
+            <div class="input-container">
+                <label>Abstract:</label><br />
+                <textarea id="abstract" name="abstract"></textarea><br />
+            </div>
+            <div class="input-container">
+                <label>Experience:</label><br />
+                <textarea id="experience" name="experience"></textarea><br />
+            </div>
+            <input type="submit" id="submitBtn" value="Submit request">
+        </form>
+    </div>    
     <style>
-    .error {
-      color: #000;
+    .holder {
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-flow: column;
     }
-
     .input-container {
-      display: flex;
-      flex-direction: column;
-      margin: 1rem auto;
+        min-width: 30vw;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+    }
+    .input-container textarea {
+        min-height: 150px;
     }
     </style>
 
